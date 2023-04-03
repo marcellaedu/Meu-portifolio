@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@200;600&display=swap');
+
+:root{
+    --primeira-cor: #06283D;
+    --segunda-cor: #256D85;
+    --terceira-cor: #DFF6FF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: var(--primeira-cor);
+    color: var(--terceira-cor);
+    font-family: 'Montserrat', sans-serif;
+}
+    body.site{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    body.site .container{
+        flex-grow: 1;
+    }
+.cabecalho{
+    margin: 2% 10%;
+}
+    .cabecalho nav{
+        display: flex;
+        gap: 25px;
+
+    }
+    .cabecalho nav a{
+    text-decoration: none;
+    color: var(--terceira-cor);
+    }
+
+.container{
+    display: flex;
+    flex-direction: row;
+    /* width: ; */
+    margin: 5% 10% 5% 10%;
+}
+
+/* container */
+
+/* Conteudo */
+.container .conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+.container .conteudo h1{
+    font-family: 'Krona One', sans-serif;
+}
+    .container .conteudo h1 span{
+        color: var(--segunda-cor);
+    }
+    .container .conteudo p{
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+    .container .conteudo .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+        .container .conteudo .redes-sociais a{
+            width: 200px;
+            border: solid 1px var(--segunda-cor);
+            color: var(--terceira-cor);
+            padding: 5px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+.container .avatar{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rodape{
+    display: flex;
+    height: 50px;
+    background: var(--segunda-cor);
+    text-align: center;
+    color: var(--primeira-cor);
+    align-items: center;
+    justify-content: center;
+}
+
+/*Responsivo*/
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+    }
+    .container .conteudo, .container .avatar{
+        width: 100%;
+    }
+    .container .conteudo .redes-sociais a{
+        width: 100%;
+    }
+}
